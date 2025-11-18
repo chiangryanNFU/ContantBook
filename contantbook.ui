@@ -13,15 +13,149 @@
   <property name="windowTitle">
    <string>ContantBook</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #f5f5f5;
+}
+
+QTableWidget {
+    background-color: white;
+    alternate-background-color: #f9f9f9;
+    selection-background-color: #4CAF50;
+    selection-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    gridline-color: #e0e0e0;
+}
+
+QTableWidget::item {
+    padding: 8px;
+}
+
+QTableWidget QHeaderView::section {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+QLabel {
+    font-size: 11pt;
+    color: #333;
+    font-weight: 500;
+}
+
+QLineEdit {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 10pt;
+}
+
+QLineEdit:focus {
+    border: 2px solid #2196F3;
+}
+
+QPushButton {
+    padding: 10px 20px;
+    font-size: 11pt;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    min-width: 100px;
+    min-height: 40px;
+}
+
+QPushButton:hover {
+    opacity: 0.9;
+}
+
+QPushButton:pressed {
+    padding: 11px 19px 9px 21px;
+}
+
+#pushButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#pushButton:hover {
+    background-color: #45a049;
+}
+
+#pushButton_2 {
+    background-color: #2196F3;
+    color: white;
+}
+
+#pushButton_2:hover {
+    background-color: #0b7dda;
+}
+
+#pushButton_3 {
+    background-color: #FF9800;
+    color: white;
+}
+
+#pushButton_3:hover {
+    background-color: #e68900;
+}
+
+#pushButton_4 {
+    background-color: #f44336;
+    color: white;
+}
+
+#pushButton_4:hover {
+    background-color: #da190b;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>15</number>
+    </property>
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
     <item>
-     <widget class="QTableWidget" name="tableWidget"/>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="showGrid">
+       <bool>true</bool>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
     </item>
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
       <item>
        <layout class="QFormLayout" name="formLayout_3">
+        <property name="horizontalSpacing">
+         <number>15</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>12</number>
+        </property>
         <item row="0" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
@@ -66,6 +200,9 @@
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>15</number>
+        </property>
         <item>
          <spacer name="horizontalSpacer">
           <property name="orientation">
